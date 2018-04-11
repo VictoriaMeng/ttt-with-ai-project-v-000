@@ -1,4 +1,6 @@
-require ‘pry’
+require 'pry'
+
+
 class Board
  attr_accessor :cells
 
@@ -11,7 +13,7 @@ class Board
  end
 
  def display
-   puts "#{cells[0]} | #{cells[1]} | #{cells[2]} \n-----------\n #{cells[3]} | #{cells[4]} | #{cells[5]} \n-----------\n #{cells[6]} | #{cells[7]} | #{cells[8]}"
+   puts " #{cells[0]} | #{cells[1]} | #{cells[2]} \n-----------\n #{cells[3]} | #{cells[4]} | #{cells[5]} \n-----------\n #{cells[6]} | #{cells[7]} | #{cells[8]}\n"
  end
 
  def position(input)
@@ -19,15 +21,15 @@ class Board
  end
 
  def full?
-   cells.all?{|i| i == “X” || i == “O”}
+   cells.all?{|i| i == "X" || i == "O"}
  end
 
  def turn_count
-   cells.count{|i| i == “X” || i == “O”}
+   cells.count{|i| i == "X" || i == "O"}
  end
 
  def taken?(input)
-   position(input) == “X” || position(input) == “O”
+   position(input) == "X" || position(input) == "O"
  end
 
  def valid_move?(input)
