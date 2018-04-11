@@ -29,7 +29,7 @@ class Game
  end
 
  def won?
-   matches = WIN_COMBINATIONS.detect do |combo|
+   matches = WIN_COMBINATIONS.select do |combo|
     tokens = combo.map {|cell| @board.cells[cell]}
     tokens.uniq.size == 1 && tokens.none? { |token| token == " " }
    end
