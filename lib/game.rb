@@ -60,7 +60,8 @@ class Game
  end
 
  def play
-   loop do
+   until over?
+     turn
    end
  end
 
