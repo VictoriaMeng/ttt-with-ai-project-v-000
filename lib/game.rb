@@ -60,6 +60,8 @@ class Game
  end
 
  def play
+   loop do
+   end
  end
 
 end
