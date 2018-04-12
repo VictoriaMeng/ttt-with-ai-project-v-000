@@ -63,7 +63,7 @@ class Game
    until over?
      turn
    end
-   draw? ? puts "Cat's Game!" : puts "Congratulations #{winner}!"
+   draw? ? "Cat's Game!" : "Congratulations #{winner}!"
  end
 
 end
