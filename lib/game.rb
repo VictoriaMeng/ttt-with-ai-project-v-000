@@ -52,7 +52,7 @@ class Game
  end
 
  def turn
-  current_player.move(@board)
+  input = current_player.move(@board)
   @board.update(input, current_player)
  end
 
