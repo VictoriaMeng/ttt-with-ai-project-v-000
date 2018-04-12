@@ -1,4 +1,5 @@
 require 'pry'
+require_relative 'board.rb'
 
 class Game
  attr_accessor :board, :player_1, :player_2
@@ -51,7 +52,8 @@ class Game
  end
 
  def turn
-
+  current_player.move(@board)
+  @board.update(input, current_player)
  end
 
 end
