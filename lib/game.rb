@@ -59,4 +59,7 @@ class Game
   @board.update(input, current_player)
  end
 
+ def play
+ end
+
 end
